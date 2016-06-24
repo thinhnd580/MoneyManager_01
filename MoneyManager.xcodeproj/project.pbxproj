@@ -1,0 +1,886 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17DBDB79331C2D41878932EE /* libPods-MoneyManagerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBE5D5CBAFC8B0A8BFD3B52 /* libPods-MoneyManagerUITests.a */; };
+		408CD5BE1D1A1B4A0059EC21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 408CD5BD1D1A1B4A0059EC21 /* main.m */; };
+		408CD5C11D1A1B4A0059EC21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 408CD5C01D1A1B4A0059EC21 /* AppDelegate.m */; };
+		408CD5C71D1A1B4A0059EC21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 408CD5C51D1A1B4A0059EC21 /* Main.storyboard */; };
+		408CD5C91D1A1B4A0059EC21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 408CD5C81D1A1B4A0059EC21 /* Assets.xcassets */; };
+		408CD5CC1D1A1B4A0059EC21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 408CD5CA1D1A1B4A0059EC21 /* LaunchScreen.storyboard */; };
+		408CD5D71D1A1B4A0059EC21 /* MoneyManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 408CD5D61D1A1B4A0059EC21 /* MoneyManagerTests.m */; };
+		408CD5E21D1A1B4A0059EC21 /* MoneyManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 408CD5E11D1A1B4A0059EC21 /* MoneyManagerUITests.m */; };
+		408CD6021D1A2D480059EC21 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408CD6011D1A2D480059EC21 /* HomeViewController.m */; };
+		408CD6061D1A2D520059EC21 /* TransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 408CD6041D1A2D520059EC21 /* TransactionCell.m */; };
+		408CD6071D1A2D520059EC21 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 408CD6051D1A2D520059EC21 /* TransactionCell.xib */; };
+		408CD60F1D1A48490059EC21 /* AddWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408CD60D1D1A48490059EC21 /* AddWalletViewController.m */; };
+		408CD6141D1A711D0059EC21 /* AddTransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408CD6131D1A711D0059EC21 /* AddTransactionViewController.m */; };
+		408CD61A1D1A837F0059EC21 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408CD6191D1A837F0059EC21 /* DatePickerViewController.m */; };
+		40FEEF4C1D1A9500003D2FD4 /* KDCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEEF411D1A9500003D2FD4 /* KDCalendarHeaderView.m */; };
+		40FEEF4D1D1A9500003D2FD4 /* KDCalendarLineReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEEF431D1A9500003D2FD4 /* KDCalendarLineReusableView.m */; };
+		40FEEF4E1D1A9500003D2FD4 /* KDCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEEF451D1A9500003D2FD4 /* KDCalendarView.m */; };
+		40FEEF4F1D1A9500003D2FD4 /* KDCalendarViewDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEEF471D1A9500003D2FD4 /* KDCalendarViewDayCell.m */; };
+		40FEEF501D1A9500003D2FD4 /* KDCalendarViewMonthCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEEF491D1A9500003D2FD4 /* KDCalendarViewMonthCell.m */; };
+		40FEEF511D1A9500003D2FD4 /* KDMonthCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEEF4B1D1A9500003D2FD4 /* KDMonthCollectionViewFlowLayout.m */; };
+		40FEEF531D1A951E003D2FD4 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40FEEF521D1A951E003D2FD4 /* EventKit.framework */; };
+		542104323071D1300531BD1E /* libPods-MoneyManagerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 391938814DE25A17ED5501AB /* libPods-MoneyManagerTests.a */; };
+		CC266E9BC70DDF466DE6137C /* libPods-MoneyManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D2E48FDE030E95EA3764E2B /* libPods-MoneyManager.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		408CD5D31D1A1B4A0059EC21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 408CD5B11D1A1B490059EC21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 408CD5B81D1A1B4A0059EC21;
+			remoteInfo = MoneyManager;
+		};
+		408CD5DE1D1A1B4A0059EC21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 408CD5B11D1A1B490059EC21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 408CD5B81D1A1B4A0059EC21;
+			remoteInfo = MoneyManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07F37EF35236264A033D89AA /* Pods-MoneyManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyManagerUITests/Pods-MoneyManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1D5A210472FAB884904963FC /* Pods-MoneyManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyManagerTests/Pods-MoneyManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		207C5B8E433B099A866A9C07 /* Pods-MoneyManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyManager/Pods-MoneyManager.debug.xcconfig"; sourceTree = "<group>"; };
+		3644333193BFD76536DF29D5 /* Pods-MoneyManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyManagerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyManagerUITests/Pods-MoneyManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		391938814DE25A17ED5501AB /* libPods-MoneyManagerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoneyManagerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A1B59DC48E54C304E220114 /* Pods-MoneyManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyManagerTests/Pods-MoneyManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3EBE5D5CBAFC8B0A8BFD3B52 /* libPods-MoneyManagerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoneyManagerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		408CD5B91D1A1B4A0059EC21 /* MoneyManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		408CD5BD1D1A1B4A0059EC21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		408CD5BF1D1A1B4A0059EC21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		408CD5C01D1A1B4A0059EC21 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		408CD5C61D1A1B4A0059EC21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		408CD5C81D1A1B4A0059EC21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		408CD5CB1D1A1B4A0059EC21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		408CD5CD1D1A1B4A0059EC21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		408CD5D21D1A1B4A0059EC21 /* MoneyManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		408CD5D61D1A1B4A0059EC21 /* MoneyManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyManagerTests.m; sourceTree = "<group>"; };
+		408CD5D81D1A1B4A0059EC21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		408CD5DD1D1A1B4A0059EC21 /* MoneyManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		408CD5E11D1A1B4A0059EC21 /* MoneyManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoneyManagerUITests.m; sourceTree = "<group>"; };
+		408CD5E31D1A1B4A0059EC21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		408CD6001D1A2D480059EC21 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Classes/ViewController/HomeViewController/HomeViewController.h; sourceTree = "<group>"; };
+		408CD6011D1A2D480059EC21 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Classes/ViewController/HomeViewController/HomeViewController.m; sourceTree = "<group>"; };
+		408CD6031D1A2D520059EC21 /* TransactionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransactionCell.h; path = Classes/ViewController/HomeViewController/TransactionCell/TransactionCell.h; sourceTree = "<group>"; };
+		408CD6041D1A2D520059EC21 /* TransactionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransactionCell.m; path = Classes/ViewController/HomeViewController/TransactionCell/TransactionCell.m; sourceTree = "<group>"; };
+		408CD6051D1A2D520059EC21 /* TransactionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TransactionCell.xib; path = Classes/ViewController/HomeViewController/TransactionCell/TransactionCell.xib; sourceTree = "<group>"; };
+		408CD60C1D1A48490059EC21 /* AddWalletViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddWalletViewController.h; path = Classes/ViewController/AddWalletViewController/AddWalletViewController.h; sourceTree = "<group>"; };
+		408CD60D1D1A48490059EC21 /* AddWalletViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddWalletViewController.m; path = Classes/ViewController/AddWalletViewController/AddWalletViewController.m; sourceTree = "<group>"; };
+		408CD6121D1A711D0059EC21 /* AddTransactionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTransactionViewController.h; path = Classes/ViewController/AddTransactionViewController/AddTransactionViewController.h; sourceTree = "<group>"; };
+		408CD6131D1A711D0059EC21 /* AddTransactionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTransactionViewController.m; path = Classes/ViewController/AddTransactionViewController/AddTransactionViewController.m; sourceTree = "<group>"; };
+		408CD6181D1A837F0059EC21 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatePickerViewController.h; path = Classes/ViewController/DatePickerViewController/DatePickerViewController.h; sourceTree = "<group>"; };
+		408CD6191D1A837F0059EC21 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatePickerViewController.m; path = Classes/ViewController/DatePickerViewController/DatePickerViewController.m; sourceTree = "<group>"; };
+		409CB8691D1BBA5D001D9A53 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		409CB86A1D1BBA5E001D9A53 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		40FEEF401D1A9500003D2FD4 /* KDCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KDCalendarHeaderView.h; path = Library/KDCalendarHeaderView.h; sourceTree = "<group>"; };
+		40FEEF411D1A9500003D2FD4 /* KDCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KDCalendarHeaderView.m; path = Library/KDCalendarHeaderView.m; sourceTree = "<group>"; };
+		40FEEF421D1A9500003D2FD4 /* KDCalendarLineReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KDCalendarLineReusableView.h; path = Library/KDCalendarLineReusableView.h; sourceTree = "<group>"; };
+		40FEEF431D1A9500003D2FD4 /* KDCalendarLineReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KDCalendarLineReusableView.m; path = Library/KDCalendarLineReusableView.m; sourceTree = "<group>"; };
+		40FEEF441D1A9500003D2FD4 /* KDCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KDCalendarView.h; path = Library/KDCalendarView.h; sourceTree = "<group>"; };
+		40FEEF451D1A9500003D2FD4 /* KDCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KDCalendarView.m; path = Library/KDCalendarView.m; sourceTree = "<group>"; };
+		40FEEF461D1A9500003D2FD4 /* KDCalendarViewDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KDCalendarViewDayCell.h; path = Library/KDCalendarViewDayCell.h; sourceTree = "<group>"; };
+		40FEEF471D1A9500003D2FD4 /* KDCalendarViewDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KDCalendarViewDayCell.m; path = Library/KDCalendarViewDayCell.m; sourceTree = "<group>"; };
+		40FEEF481D1A9500003D2FD4 /* KDCalendarViewMonthCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KDCalendarViewMonthCell.h; path = Library/KDCalendarViewMonthCell.h; sourceTree = "<group>"; };
+		40FEEF491D1A9500003D2FD4 /* KDCalendarViewMonthCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KDCalendarViewMonthCell.m; path = Library/KDCalendarViewMonthCell.m; sourceTree = "<group>"; };
+		40FEEF4A1D1A9500003D2FD4 /* KDMonthCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KDMonthCollectionViewFlowLayout.h; path = Library/KDMonthCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		40FEEF4B1D1A9500003D2FD4 /* KDMonthCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KDMonthCollectionViewFlowLayout.m; path = Library/KDMonthCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		40FEEF521D1A951E003D2FD4 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		4D2E48FDE030E95EA3764E2B /* libPods-MoneyManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoneyManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		981155AE2A9C25D0C3CD46D7 /* Pods-MoneyManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyManager/Pods-MoneyManager.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		408CD5B61D1A1B4A0059EC21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40FEEF531D1A951E003D2FD4 /* EventKit.framework in Frameworks */,
+				CC266E9BC70DDF466DE6137C /* libPods-MoneyManager.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408CD5CF1D1A1B4A0059EC21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				542104323071D1300531BD1E /* libPods-MoneyManagerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408CD5DA1D1A1B4A0059EC21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17DBDB79331C2D41878932EE /* libPods-MoneyManagerUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		408CD5B01D1A1B490059EC21 = {
+			isa = PBXGroup;
+			children = (
+				408CD5BB1D1A1B4A0059EC21 /* MoneyManager */,
+				408CD5D51D1A1B4A0059EC21 /* MoneyManagerTests */,
+				408CD5E01D1A1B4A0059EC21 /* MoneyManagerUITests */,
+				408CD5BA1D1A1B4A0059EC21 /* Products */,
+				47372FDC0748AA88F6E5773A /* Pods */,
+				FDCA623C4D898924E8C337AE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		408CD5BA1D1A1B4A0059EC21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				408CD5B91D1A1B4A0059EC21 /* MoneyManager.app */,
+				408CD5D21D1A1B4A0059EC21 /* MoneyManagerTests.xctest */,
+				408CD5DD1D1A1B4A0059EC21 /* MoneyManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		408CD5BB1D1A1B4A0059EC21 /* MoneyManager */ = {
+			isa = PBXGroup;
+			children = (
+				409CB86B1D1BE31C001D9A53 /* Resource */,
+				408CD5F91D1A275C0059EC21 /* Libraries */,
+				408CD5EF1D1A25DA0059EC21 /* Classes */,
+				408CD5BF1D1A1B4A0059EC21 /* AppDelegate.h */,
+				408CD5C01D1A1B4A0059EC21 /* AppDelegate.m */,
+				408CD5C51D1A1B4A0059EC21 /* Main.storyboard */,
+				408CD5C81D1A1B4A0059EC21 /* Assets.xcassets */,
+				408CD5CA1D1A1B4A0059EC21 /* LaunchScreen.storyboard */,
+				408CD5CD1D1A1B4A0059EC21 /* Info.plist */,
+				408CD5BC1D1A1B4A0059EC21 /* Supporting Files */,
+			);
+			path = MoneyManager;
+			sourceTree = "<group>";
+		};
+		408CD5BC1D1A1B4A0059EC21 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				408CD5BD1D1A1B4A0059EC21 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		408CD5D51D1A1B4A0059EC21 /* MoneyManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				408CD5D61D1A1B4A0059EC21 /* MoneyManagerTests.m */,
+				408CD5D81D1A1B4A0059EC21 /* Info.plist */,
+			);
+			path = MoneyManagerTests;
+			sourceTree = "<group>";
+		};
+		408CD5E01D1A1B4A0059EC21 /* MoneyManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				408CD5E11D1A1B4A0059EC21 /* MoneyManagerUITests.m */,
+				408CD5E31D1A1B4A0059EC21 /* Info.plist */,
+			);
+			path = MoneyManagerUITests;
+			sourceTree = "<group>";
+		};
+		408CD5EF1D1A25DA0059EC21 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				408CD5F81D1A273D0059EC21 /* Service */,
+				408CD5F71D1A272E0059EC21 /* Helper */,
+				408CD5F61D1A27120059EC21 /* Common */,
+				408CD5F51D1A26F50059EC21 /* Modal */,
+				408CD5F01D1A26110059EC21 /* ViewController */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		408CD5F01D1A26110059EC21 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				408CD6171D1A83640059EC21 /* DatePickerViewController */,
+				408CD6111D1A70F60059EC21 /* AddTransactionViewController */,
+				408CD60B1D1A481F0059EC21 /* AddWalletViewController */,
+				408CD5F11D1A261B0059EC21 /* HomeViewController */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		408CD5F11D1A261B0059EC21 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				408CD6001D1A2D480059EC21 /* HomeViewController.h */,
+				408CD6011D1A2D480059EC21 /* HomeViewController.m */,
+				408CD5FA1D1A2CC20059EC21 /* TransactionCell */,
+			);
+			name = HomeViewController;
+			sourceTree = "<group>";
+		};
+		408CD5F51D1A26F50059EC21 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
+		408CD5F61D1A27120059EC21 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		408CD5F71D1A272E0059EC21 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		408CD5F81D1A273D0059EC21 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		408CD5F91D1A275C0059EC21 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				40FEEF401D1A9500003D2FD4 /* KDCalendarHeaderView.h */,
+				40FEEF411D1A9500003D2FD4 /* KDCalendarHeaderView.m */,
+				40FEEF421D1A9500003D2FD4 /* KDCalendarLineReusableView.h */,
+				40FEEF431D1A9500003D2FD4 /* KDCalendarLineReusableView.m */,
+				40FEEF441D1A9500003D2FD4 /* KDCalendarView.h */,
+				40FEEF451D1A9500003D2FD4 /* KDCalendarView.m */,
+				40FEEF461D1A9500003D2FD4 /* KDCalendarViewDayCell.h */,
+				40FEEF471D1A9500003D2FD4 /* KDCalendarViewDayCell.m */,
+				40FEEF481D1A9500003D2FD4 /* KDCalendarViewMonthCell.h */,
+				40FEEF491D1A9500003D2FD4 /* KDCalendarViewMonthCell.m */,
+				40FEEF4A1D1A9500003D2FD4 /* KDMonthCollectionViewFlowLayout.h */,
+				40FEEF4B1D1A9500003D2FD4 /* KDMonthCollectionViewFlowLayout.m */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		408CD5FA1D1A2CC20059EC21 /* TransactionCell */ = {
+			isa = PBXGroup;
+			children = (
+				408CD6031D1A2D520059EC21 /* TransactionCell.h */,
+				408CD6041D1A2D520059EC21 /* TransactionCell.m */,
+				408CD6051D1A2D520059EC21 /* TransactionCell.xib */,
+			);
+			name = TransactionCell;
+			sourceTree = "<group>";
+		};
+		408CD60B1D1A481F0059EC21 /* AddWalletViewController */ = {
+			isa = PBXGroup;
+			children = (
+				408CD60C1D1A48490059EC21 /* AddWalletViewController.h */,
+				408CD60D1D1A48490059EC21 /* AddWalletViewController.m */,
+			);
+			name = AddWalletViewController;
+			sourceTree = "<group>";
+		};
+		408CD6111D1A70F60059EC21 /* AddTransactionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				408CD6121D1A711D0059EC21 /* AddTransactionViewController.h */,
+				408CD6131D1A711D0059EC21 /* AddTransactionViewController.m */,
+			);
+			name = AddTransactionViewController;
+			sourceTree = "<group>";
+		};
+		408CD6171D1A83640059EC21 /* DatePickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				408CD6181D1A837F0059EC21 /* DatePickerViewController.h */,
+				408CD6191D1A837F0059EC21 /* DatePickerViewController.m */,
+			);
+			name = DatePickerViewController;
+			sourceTree = "<group>";
+		};
+		409CB86B1D1BE31C001D9A53 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		47372FDC0748AA88F6E5773A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				207C5B8E433B099A866A9C07 /* Pods-MoneyManager.debug.xcconfig */,
+				981155AE2A9C25D0C3CD46D7 /* Pods-MoneyManager.release.xcconfig */,
+				3A1B59DC48E54C304E220114 /* Pods-MoneyManagerTests.debug.xcconfig */,
+				1D5A210472FAB884904963FC /* Pods-MoneyManagerTests.release.xcconfig */,
+				07F37EF35236264A033D89AA /* Pods-MoneyManagerUITests.debug.xcconfig */,
+				3644333193BFD76536DF29D5 /* Pods-MoneyManagerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FDCA623C4D898924E8C337AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40FEEF521D1A951E003D2FD4 /* EventKit.framework */,
+				4D2E48FDE030E95EA3764E2B /* libPods-MoneyManager.a */,
+				391938814DE25A17ED5501AB /* libPods-MoneyManagerTests.a */,
+				3EBE5D5CBAFC8B0A8BFD3B52 /* libPods-MoneyManagerUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		408CD5B81D1A1B4A0059EC21 /* MoneyManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 408CD5E61D1A1B4A0059EC21 /* Build configuration list for PBXNativeTarget "MoneyManager" */;
+			buildPhases = (
+				A5ABEBAF6A6985F3CFA203FC /* 📦 Check Pods Manifest.lock */,
+				408CD5B51D1A1B4A0059EC21 /* Sources */,
+				408CD5B61D1A1B4A0059EC21 /* Frameworks */,
+				408CD5B71D1A1B4A0059EC21 /* Resources */,
+				8A9D3B4A14F24B6160BFD770 /* 📦 Embed Pods Frameworks */,
+				440B039ABD6459CDE53B670D /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoneyManager;
+			productName = MoneyManager;
+			productReference = 408CD5B91D1A1B4A0059EC21 /* MoneyManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		408CD5D11D1A1B4A0059EC21 /* MoneyManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 408CD5E91D1A1B4A0059EC21 /* Build configuration list for PBXNativeTarget "MoneyManagerTests" */;
+			buildPhases = (
+				49B1AADE3FEBCAC6FA83AFB9 /* 📦 Check Pods Manifest.lock */,
+				408CD5CE1D1A1B4A0059EC21 /* Sources */,
+				408CD5CF1D1A1B4A0059EC21 /* Frameworks */,
+				408CD5D01D1A1B4A0059EC21 /* Resources */,
+				0049FA3EC3E688BF5FB2F4BE /* 📦 Embed Pods Frameworks */,
+				0E9091DF8CF0DF9DAD43F3C4 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				408CD5D41D1A1B4A0059EC21 /* PBXTargetDependency */,
+			);
+			name = MoneyManagerTests;
+			productName = MoneyManagerTests;
+			productReference = 408CD5D21D1A1B4A0059EC21 /* MoneyManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		408CD5DC1D1A1B4A0059EC21 /* MoneyManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 408CD5EC1D1A1B4A0059EC21 /* Build configuration list for PBXNativeTarget "MoneyManagerUITests" */;
+			buildPhases = (
+				F6B64F06AC064CA06975911C /* 📦 Check Pods Manifest.lock */,
+				408CD5D91D1A1B4A0059EC21 /* Sources */,
+				408CD5DA1D1A1B4A0059EC21 /* Frameworks */,
+				408CD5DB1D1A1B4A0059EC21 /* Resources */,
+				E039CDD6B0A5D040F7A870D4 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				408CD5DF1D1A1B4A0059EC21 /* PBXTargetDependency */,
+			);
+			name = MoneyManagerUITests;
+			productName = MoneyManagerUITests;
+			productReference = 408CD5DD1D1A1B4A0059EC21 /* MoneyManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		408CD5B11D1A1B490059EC21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Thinh;
+				TargetAttributes = {
+					408CD5B81D1A1B4A0059EC21 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = Q34VKJFVAS;
+					};
+					408CD5D11D1A1B4A0059EC21 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 408CD5B81D1A1B4A0059EC21;
+					};
+					408CD5DC1D1A1B4A0059EC21 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 408CD5B81D1A1B4A0059EC21;
+					};
+				};
+			};
+			buildConfigurationList = 408CD5B41D1A1B490059EC21 /* Build configuration list for PBXProject "MoneyManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 408CD5B01D1A1B490059EC21;
+			productRefGroup = 408CD5BA1D1A1B4A0059EC21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				408CD5B81D1A1B4A0059EC21 /* MoneyManager */,
+				408CD5D11D1A1B4A0059EC21 /* MoneyManagerTests */,
+				408CD5DC1D1A1B4A0059EC21 /* MoneyManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		408CD5B71D1A1B4A0059EC21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408CD5CC1D1A1B4A0059EC21 /* LaunchScreen.storyboard in Resources */,
+				408CD5C91D1A1B4A0059EC21 /* Assets.xcassets in Resources */,
+				408CD6071D1A2D520059EC21 /* TransactionCell.xib in Resources */,
+				408CD5C71D1A1B4A0059EC21 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408CD5D01D1A1B4A0059EC21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408CD5DB1D1A1B4A0059EC21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0049FA3EC3E688BF5FB2F4BE /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyManagerTests/Pods-MoneyManagerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E9091DF8CF0DF9DAD43F3C4 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyManagerTests/Pods-MoneyManagerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		440B039ABD6459CDE53B670D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyManager/Pods-MoneyManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49B1AADE3FEBCAC6FA83AFB9 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8A9D3B4A14F24B6160BFD770 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyManager/Pods-MoneyManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5ABEBAF6A6985F3CFA203FC /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E039CDD6B0A5D040F7A870D4 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyManagerUITests/Pods-MoneyManagerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6B64F06AC064CA06975911C /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		408CD5B51D1A1B4A0059EC21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40FEEF4D1D1A9500003D2FD4 /* KDCalendarLineReusableView.m in Sources */,
+				408CD61A1D1A837F0059EC21 /* DatePickerViewController.m in Sources */,
+				408CD5C11D1A1B4A0059EC21 /* AppDelegate.m in Sources */,
+				40FEEF4F1D1A9500003D2FD4 /* KDCalendarViewDayCell.m in Sources */,
+				40FEEF4C1D1A9500003D2FD4 /* KDCalendarHeaderView.m in Sources */,
+				40FEEF501D1A9500003D2FD4 /* KDCalendarViewMonthCell.m in Sources */,
+				408CD5BE1D1A1B4A0059EC21 /* main.m in Sources */,
+				408CD60F1D1A48490059EC21 /* AddWalletViewController.m in Sources */,
+				408CD6061D1A2D520059EC21 /* TransactionCell.m in Sources */,
+				40FEEF4E1D1A9500003D2FD4 /* KDCalendarView.m in Sources */,
+				408CD6141D1A711D0059EC21 /* AddTransactionViewController.m in Sources */,
+				40FEEF511D1A9500003D2FD4 /* KDMonthCollectionViewFlowLayout.m in Sources */,
+				408CD6021D1A2D480059EC21 /* HomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408CD5CE1D1A1B4A0059EC21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408CD5D71D1A1B4A0059EC21 /* MoneyManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		408CD5D91D1A1B4A0059EC21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408CD5E21D1A1B4A0059EC21 /* MoneyManagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		408CD5D41D1A1B4A0059EC21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 408CD5B81D1A1B4A0059EC21 /* MoneyManager */;
+			targetProxy = 408CD5D31D1A1B4A0059EC21 /* PBXContainerItemProxy */;
+		};
+		408CD5DF1D1A1B4A0059EC21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 408CD5B81D1A1B4A0059EC21 /* MoneyManager */;
+			targetProxy = 408CD5DE1D1A1B4A0059EC21 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		408CD5C51D1A1B4A0059EC21 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				408CD5C61D1A1B4A0059EC21 /* Base */,
+				409CB8691D1BBA5D001D9A53 /* vi */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		408CD5CA1D1A1B4A0059EC21 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				408CD5CB1D1A1B4A0059EC21 /* Base */,
+				409CB86A1D1BBA5E001D9A53 /* vi */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		408CD5E41D1A1B4A0059EC21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		408CD5E51D1A1B4A0059EC21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		408CD5E71D1A1B4A0059EC21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 207C5B8E433B099A866A9C07 /* Pods-MoneyManager.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MoneyManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thjnh.MoneyManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		408CD5E81D1A1B4A0059EC21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 981155AE2A9C25D0C3CD46D7 /* Pods-MoneyManager.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MoneyManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thjnh.MoneyManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		408CD5EA1D1A1B4A0059EC21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A1B59DC48E54C304E220114 /* Pods-MoneyManagerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MoneyManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thjnh.MoneyManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyManager.app/MoneyManager";
+			};
+			name = Debug;
+		};
+		408CD5EB1D1A1B4A0059EC21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D5A210472FAB884904963FC /* Pods-MoneyManagerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MoneyManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thjnh.MoneyManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyManager.app/MoneyManager";
+			};
+			name = Release;
+		};
+		408CD5ED1D1A1B4A0059EC21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07F37EF35236264A033D89AA /* Pods-MoneyManagerUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = MoneyManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thjnh.MoneyManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MoneyManager;
+			};
+			name = Debug;
+		};
+		408CD5EE1D1A1B4A0059EC21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3644333193BFD76536DF29D5 /* Pods-MoneyManagerUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = MoneyManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thjnh.MoneyManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MoneyManager;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		408CD5B41D1A1B490059EC21 /* Build configuration list for PBXProject "MoneyManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				408CD5E41D1A1B4A0059EC21 /* Debug */,
+				408CD5E51D1A1B4A0059EC21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		408CD5E61D1A1B4A0059EC21 /* Build configuration list for PBXNativeTarget "MoneyManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				408CD5E71D1A1B4A0059EC21 /* Debug */,
+				408CD5E81D1A1B4A0059EC21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		408CD5E91D1A1B4A0059EC21 /* Build configuration list for PBXNativeTarget "MoneyManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				408CD5EA1D1A1B4A0059EC21 /* Debug */,
+				408CD5EB1D1A1B4A0059EC21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		408CD5EC1D1A1B4A0059EC21 /* Build configuration list for PBXNativeTarget "MoneyManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				408CD5ED1D1A1B4A0059EC21 /* Debug */,
+				408CD5EE1D1A1B4A0059EC21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 408CD5B11D1A1B490059EC21 /* Project object */;
+}

@@ -1,0 +1,126 @@
+
+/* Class = "UITextField"; placeholder = "Đơn vị tiền tệ"; ObjectID = "7jL-Xm-J7R"; */
+"7jL-Xm-J7R.placeholder" = "Đơn vị tiền tệ";
+
+/* Class = "UIButton"; normalTitle = "Picture"; ObjectID = "8uE-yD-aqw"; */
+"8uE-yD-aqw.normalTitle" = "Picture";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "A9l-Oz-dHC"; */
+"A9l-Oz-dHC.text" = "Label";
+
+/* Class = "UILabel"; text = "dd/mm/yyyy"; ObjectID = "Agc-Cw-K60"; */
+"Agc-Cw-K60.text" = "dd/mm/yyyy";
+
+/* Class = "UILabel"; text = "Không tính vào tổng"; ObjectID = "BhR-Rg-sac"; */
+"BhR-Rg-sac.text" = "Không tính vào tổng";
+
+/* Class = "UILabel"; text = "21"; ObjectID = "DJa-5h-dLI"; */
+"DJa-5h-dLI.text" = "21";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Fca-Em-bmp"; */
+"Fca-Em-bmp.text" = "Label";
+
+/* Class = "UILabel"; text = "Tháng 6 2016"; ObjectID = "G44-vg-fwa"; */
+"G44-vg-fwa.text" = "Tháng 6 2016";
+
+/* Class = "UILabel"; text = "Cash Sumary"; ObjectID = "J3y-Fr-K8B"; */
+"J3y-Fr-K8B.text" = "Cash Sumary";
+
+/* Class = "UILabel"; text = "Date Month"; ObjectID = "KzE-VK-eSJ"; */
+"KzE-VK-eSJ.text" = "Date Month";
+
+/* Class = "UITextField"; placeholder = "Tên"; ObjectID = "M4L-yp-fiy"; */
+"M4L-yp-fiy.placeholder" = "Tên";
+
+/* Class = "UIButton"; normalTitle = "Ví AA"; ObjectID = "N3w-Qt-Dxf"; */
+"N3w-Qt-Dxf.normalTitle" = "Ví AA";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Ngr-E6-XMw"; */
+"Ngr-E6-XMw.title" = "Item";
+
+/* Class = "UITextField"; placeholder = "Chọn nhóm"; ObjectID = "OsA-oU-7U8"; */
+"OsA-oU-7U8.placeholder" = "Chọn nhóm";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "RGK-xa-cau"; */
+"RGK-xa-cau.normalTitle" = "Done";
+
+/* Class = "UILabel"; text = "Chạm để xem báo cáo đầy đủ"; ObjectID = "RyC-G4-xgl"; */
+"RyC-G4-xgl.text" = "Chạm để xem báo cáo đầy đủ";
+
+/* Class = "UIBarButtonItem"; title = "X"; ObjectID = "S3R-xZ-8b4"; */
+"S3R-xZ-8b4.title" = "X";
+
+/* Class = "UILabel"; text = "Ví"; ObjectID = "T92-43-9LI"; */
+"T92-43-9LI.text" = "Ví";
+
+/* Class = "UILabel"; text = "Số tiền ban đầu"; ObjectID = "TbY-i6-6Wl"; */
+"TbY-i6-6Wl.text" = "Số tiền ban đầu";
+
+/* Class = "UIButton"; normalTitle = "Chọn"; ObjectID = "UZR-0o-MAH"; */
+"UZR-0o-MAH.normalTitle" = "Chọn";
+
+/* Class = "UILabel"; text = "21"; ObjectID = "Vgy-yi-sjW"; */
+"Vgy-yi-sjW.text" = "21";
+
+/* Class = "UILabel"; text = "Chi tiêu"; ObjectID = "Wqy-ar-gig"; */
+"Wqy-ar-gig.text" = "Chi tiêu";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Y56-p5-Uas"; */
+"Y56-p5-Uas.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Thêm giao dịch"; ObjectID = "YCi-A0-cJx"; */
+"YCi-A0-cJx.title" = "Thêm giao dịch";
+
+/* Class = "UIButton"; normalTitle = ">"; ObjectID = "a2X-Ie-AhT"; */
+"a2X-Ie-AhT.normalTitle" = ">";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "c9g-hq-2yy"; */
+"c9g-hq-2yy.normalTitle" = "Cancel";
+
+/* Class = "UITextField"; placeholder = "Ghi chú"; ObjectID = "c9p-mS-QQ1"; */
+"c9p-mS-QQ1.placeholder" = "Ghi chú";
+
+/* Class = "UIButton"; normalTitle = "22/6/2016"; ObjectID = "cSq-RU-xOW"; */
+"cSq-RU-xOW.normalTitle" = "22/6/2016";
+
+/* Class = "UIButton"; normalTitle = "  Thêm Giao dịch  "; ObjectID = "gLH-VO-IHZ"; */
+"gLH-VO-IHZ.normalTitle" = "  Thêm Giao dịch  ";
+
+/* Class = "UIButton"; normalTitle = "X"; ObjectID = "iff-M6-pcN"; */
+"iff-M6-pcN.normalTitle" = "X";
+
+/* Class = "UINavigationItem"; title = "Thêm Ví"; ObjectID = "ipE-rw-QdS"; */
+"ipE-rw-QdS.title" = "Thêm Ví";
+
+/* Class = "UIButton"; normalTitle = "<"; ObjectID = "jDw-1S-X6g"; */
+"jDw-1S-X6g.normalTitle" = "<";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "okv-p6-gz1"; */
+"okv-p6-gz1.title" = "Home";
+
+/* Class = "UITextField"; text = "0"; ObjectID = "owY-Aw-pIS"; */
+"owY-Aw-pIS.text" = "0";
+
+/* Class = "UITextField"; text = "0"; ObjectID = "r5a-bD-AbN"; */
+"r5a-bD-AbN.text" = "0";
+
+/* Class = "UILabel"; text = "Day in week"; ObjectID = "sAn-LL-lmT"; */
+"sAn-LL-lmT.text" = "Day in week";
+
+/* Class = "UILabel"; text = "Thứ hai"; ObjectID = "sJ2-JU-aPC"; */
+"sJ2-JU-aPC.text" = "Thứ hai";
+
+/* Class = "UIButton"; normalTitle = "Camera"; ObjectID = "sMa-ox-Dae"; */
+"sMa-ox-Dae.normalTitle" = "Camera";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "srL-Xe-2t7"; */
+"srL-Xe-2t7.title" = "Done";
+
+/* Class = "UITextField"; placeholder = "Với"; ObjectID = "tFy-eW-1Er"; */
+"tFy-eW-1Er.placeholder" = "Với";
+
+/* Class = "UILabel"; text = "Tổng Quan"; ObjectID = "wgG-77-GLX"; */
+"wgG-77-GLX.text" = "Tổng Quan";
+
+/* Class = "UILabel"; text = "Thu nhập"; ObjectID = "xuF-Az-UQN"; */
+"xuF-Az-UQN.text" = "Thu nhập";
