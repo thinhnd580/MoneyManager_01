@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "TransactionCell.h"
-#import "TransactionModal.h"
 #import "DatePickerViewController.h"
+#import "AddWalletViewController.h"
+#import "AddTransactionViewController.h"
+#import "AppDelegate.h"
 
 @interface HomeViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,UIPopoverPresentationControllerDelegate>
 

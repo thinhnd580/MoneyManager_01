@@ -153,7 +153,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash Sumary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3y-Fr-K8B">
                                                         <rect key="frame" x="233" y="15" width="102" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.21176470589999999" green="0.50196078430000002" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="1" green="0.28472521649999999" blue="0.20588347579999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day in week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAn-LL-lmT">
@@ -239,7 +239,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnAddTransactionClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iJn-Ja-J8h"/>
-                                    <segue destination="4Cw-s3-MYz" kind="show" id="4lD-fh-h96"/>
+                                    <segue destination="4Cw-s3-MYz" kind="show" identifier="AddTransaction" id="4lD-fh-h96"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSq-RU-xOW">
@@ -277,7 +277,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="dNI-CM-MU2" kind="presentation" id="h6L-fR-sm7"/>
+                                    <segue destination="dNI-CM-MU2" kind="presentation" identifier="AddWallet" id="h6L-fR-sm7"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -289,7 +289,7 @@
                         <outlet property="btnPickDate" destination="cSq-RU-xOW" id="nES-Eq-z4h"/>
                         <outlet property="contrainTableViewHeight" destination="jpb-y0-qKQ" id="2nC-AA-BIX"/>
                         <outlet property="lbCashInReturn" destination="Y56-p5-Uas" id="bzY-4J-mLP"/>
-                        <outlet property="lbCashSumary" destination="Agc-Cw-K60" id="9GF-Su-5Rp"/>
+                        <outlet property="lbCashSumary" destination="J3y-Fr-K8B" id="qy7-sh-FGa"/>
                         <outlet property="lbDate" destination="Agc-Cw-K60" id="ayI-R9-OnI"/>
                         <outlet property="lbDayInMonth" destination="Vgy-yi-sjW" id="ZRt-h5-Uyh"/>
                         <outlet property="lbDayInWeek" destination="sAn-LL-lmT" id="dMZ-tB-B97"/>
@@ -472,11 +472,11 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_help.png" translatesAutoresizingMaskIntoConstraints="NO" id="soi-sO-61i">
                                                 <rect key="frame" x="40" y="40" width="24" height="24"/>
                                             </imageView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r5a-bD-AbN">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r5a-bD-AbN">
                                                 <rect key="frame" x="124" y="94" width="250" height="24"/>
                                                 <color key="textColor" red="0.057294889129999999" green="0.8350560897" blue="0.050325691460000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Chọn nhóm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OsA-oU-7U8">
                                                 <rect key="frame" x="92" y="38" width="282" height="28"/>
@@ -546,9 +546,12 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3w-Qt-Dxf">
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3w-Qt-Dxf">
                                                 <rect key="frame" x="218" y="232" width="38" height="30"/>
-                                                <state key="normal" title="Ví AA"/>
+                                                <state key="normal" title="Chọn ví"/>
+                                                <connections>
+                                                    <action selector="btnWalletClick:" destination="4Cw-s3-MYz" eventType="touchUpInside" id="MGj-57-pps"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uE-yD-aqw">
                                                 <rect key="frame" x="103" y="315" width="49" height="30"/>
@@ -689,7 +692,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGw-7r-kLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="524" y="-626"/>
+            <point key="canvasLocation" x="584" y="-642"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ciD-bp-lWQ">
@@ -732,7 +735,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Đơn vị tiền tệ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7jL-Xm-J7R">
                                         <rect key="frame" x="104" y="86" width="231" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tên" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M4L-yp-fiy">
                                         <rect key="frame" x="104" y="27" width="231" height="30"/>
@@ -754,12 +757,12 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oGT-8w-2SQ">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oGT-8w-2SQ">
                                         <rect key="frame" x="28" y="204" width="51" height="31"/>
                                     </switch>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="owY-Aw-pIS">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="owY-Aw-pIS">
                                         <rect key="frame" x="104" y="139" width="231" height="34"/>
-                                        <color key="textColor" red="0.31525049160000002" green="0.86039074280000005" blue="0.68814065680000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.057294889129999999" green="0.8350560897" blue="0.050325691460000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
@@ -855,7 +858,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="446-QA-gQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1013.5" y="286.5"/>
+            <point key="canvasLocation" x="1019.5" y="273.5"/>
         </scene>
     </scenes>
     <resources>

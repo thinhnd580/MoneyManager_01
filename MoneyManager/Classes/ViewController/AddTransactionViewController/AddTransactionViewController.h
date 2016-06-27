@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
 @interface AddTransactionViewController : UIViewController
 
@@ -20,5 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnPicture;
 @property (weak, nonatomic) IBOutlet UIButton *btnCamera;
 @property (weak, nonatomic) IBOutlet UIImageView *imgAdded;
+
+- (void)didAddTransactionWithBlock:(void (^)())completion;
 
 @end

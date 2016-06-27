@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MagicalRecord/MagicalRecord.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-
+- (BOOL)checkFirstTimeRunning;
 @end
 
