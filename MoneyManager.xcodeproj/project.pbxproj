@@ -21,6 +21,13 @@
 		408CD60F1D1A48490059EC21 /* AddWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408CD60D1D1A48490059EC21 /* AddWalletViewController.m */; };
 		408CD6141D1A711D0059EC21 /* AddTransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408CD6131D1A711D0059EC21 /* AddTransactionViewController.m */; };
 		408CD61A1D1A837F0059EC21 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 408CD6191D1A837F0059EC21 /* DatePickerViewController.m */; };
+		409CB89F1D20DBF6001D9A53 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CB8921D20DBF6001D9A53 /* Category.m */; };
+		409CB8A01D20DBF6001D9A53 /* Category+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CB8941D20DBF6001D9A53 /* Category+CoreDataProperties.m */; };
+		409CB8A11D20DBF6001D9A53 /* MoneyManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 409CB8951D20DBF6001D9A53 /* MoneyManager.xcdatamodeld */; };
+		409CB8A21D20DBF6001D9A53 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CB8981D20DBF6001D9A53 /* Transaction.m */; };
+		409CB8A31D20DBF6001D9A53 /* Transaction+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CB89A1D20DBF6001D9A53 /* Transaction+CoreDataProperties.m */; };
+		409CB8A41D20DBF6001D9A53 /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CB89C1D20DBF6001D9A53 /* Wallet.m */; };
+		409CB8A51D20DBF6001D9A53 /* Wallet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 409CB89E1D20DBF6001D9A53 /* Wallet+CoreDataProperties.m */; };
 		40FEEF4C1D1A9500003D2FD4 /* KDCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEEF411D1A9500003D2FD4 /* KDCalendarHeaderView.m */; };
 		40FEEF4D1D1A9500003D2FD4 /* KDCalendarLineReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEEF431D1A9500003D2FD4 /* KDCalendarLineReusableView.m */; };
 		40FEEF4E1D1A9500003D2FD4 /* KDCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FEEF451D1A9500003D2FD4 /* KDCalendarView.m */; };
@@ -84,6 +91,19 @@
 		408CD6191D1A837F0059EC21 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatePickerViewController.m; path = Classes/ViewController/DatePickerViewController/DatePickerViewController.m; sourceTree = "<group>"; };
 		409CB8691D1BBA5D001D9A53 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
 		409CB86A1D1BBA5E001D9A53 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		409CB8911D20DBF6001D9A53 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Category.h; path = Classes/Modal/Category.h; sourceTree = "<group>"; };
+		409CB8921D20DBF6001D9A53 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Category.m; path = Classes/Modal/Category.m; sourceTree = "<group>"; };
+		409CB8931D20DBF6001D9A53 /* Category+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Category+CoreDataProperties.h"; path = "Classes/Modal/Category+CoreDataProperties.h"; sourceTree = "<group>"; };
+		409CB8941D20DBF6001D9A53 /* Category+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Category+CoreDataProperties.m"; path = "Classes/Modal/Category+CoreDataProperties.m"; sourceTree = "<group>"; };
+		409CB8961D20DBF6001D9A53 /* MoneyManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoneyManager.xcdatamodel; sourceTree = "<group>"; };
+		409CB8971D20DBF6001D9A53 /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transaction.h; path = Classes/Modal/Transaction.h; sourceTree = "<group>"; };
+		409CB8981D20DBF6001D9A53 /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Transaction.m; path = Classes/Modal/Transaction.m; sourceTree = "<group>"; };
+		409CB8991D20DBF6001D9A53 /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Transaction+CoreDataProperties.h"; path = "Classes/Modal/Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
+		409CB89A1D20DBF6001D9A53 /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Transaction+CoreDataProperties.m"; path = "Classes/Modal/Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
+		409CB89B1D20DBF6001D9A53 /* Wallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Wallet.h; path = Classes/Modal/Wallet.h; sourceTree = "<group>"; };
+		409CB89C1D20DBF6001D9A53 /* Wallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Wallet.m; path = Classes/Modal/Wallet.m; sourceTree = "<group>"; };
+		409CB89D1D20DBF6001D9A53 /* Wallet+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Wallet+CoreDataProperties.h"; path = "Classes/Modal/Wallet+CoreDataProperties.h"; sourceTree = "<group>"; };
+		409CB89E1D20DBF6001D9A53 /* Wallet+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Wallet+CoreDataProperties.m"; path = "Classes/Modal/Wallet+CoreDataProperties.m"; sourceTree = "<group>"; };
 		40FEEF401D1A9500003D2FD4 /* KDCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KDCalendarHeaderView.h; path = Library/KDCalendarHeaderView.h; sourceTree = "<group>"; };
 		40FEEF411D1A9500003D2FD4 /* KDCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KDCalendarHeaderView.m; path = Library/KDCalendarHeaderView.m; sourceTree = "<group>"; };
 		40FEEF421D1A9500003D2FD4 /* KDCalendarLineReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KDCalendarLineReusableView.h; path = Library/KDCalendarLineReusableView.h; sourceTree = "<group>"; };
@@ -231,6 +251,19 @@
 		408CD5F51D1A26F50059EC21 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				409CB8911D20DBF6001D9A53 /* Category.h */,
+				409CB8921D20DBF6001D9A53 /* Category.m */,
+				409CB8931D20DBF6001D9A53 /* Category+CoreDataProperties.h */,
+				409CB8941D20DBF6001D9A53 /* Category+CoreDataProperties.m */,
+				409CB8951D20DBF6001D9A53 /* MoneyManager.xcdatamodeld */,
+				409CB8971D20DBF6001D9A53 /* Transaction.h */,
+				409CB8981D20DBF6001D9A53 /* Transaction.m */,
+				409CB8991D20DBF6001D9A53 /* Transaction+CoreDataProperties.h */,
+				409CB89A1D20DBF6001D9A53 /* Transaction+CoreDataProperties.m */,
+				409CB89B1D20DBF6001D9A53 /* Wallet.h */,
+				409CB89C1D20DBF6001D9A53 /* Wallet.m */,
+				409CB89D1D20DBF6001D9A53 /* Wallet+CoreDataProperties.h */,
+				409CB89E1D20DBF6001D9A53 /* Wallet+CoreDataProperties.m */,
 			);
 			name = Modal;
 			sourceTree = "<group>";
@@ -608,16 +641,23 @@
 			files = (
 				40FEEF4D1D1A9500003D2FD4 /* KDCalendarLineReusableView.m in Sources */,
 				408CD61A1D1A837F0059EC21 /* DatePickerViewController.m in Sources */,
+				409CB8A51D20DBF6001D9A53 /* Wallet+CoreDataProperties.m in Sources */,
+				409CB8A01D20DBF6001D9A53 /* Category+CoreDataProperties.m in Sources */,
 				408CD5C11D1A1B4A0059EC21 /* AppDelegate.m in Sources */,
+				409CB8A11D20DBF6001D9A53 /* MoneyManager.xcdatamodeld in Sources */,
 				40FEEF4F1D1A9500003D2FD4 /* KDCalendarViewDayCell.m in Sources */,
 				40FEEF4C1D1A9500003D2FD4 /* KDCalendarHeaderView.m in Sources */,
 				40FEEF501D1A9500003D2FD4 /* KDCalendarViewMonthCell.m in Sources */,
 				408CD5BE1D1A1B4A0059EC21 /* main.m in Sources */,
+				409CB89F1D20DBF6001D9A53 /* Category.m in Sources */,
+				409CB8A21D20DBF6001D9A53 /* Transaction.m in Sources */,
 				408CD60F1D1A48490059EC21 /* AddWalletViewController.m in Sources */,
 				408CD6061D1A2D520059EC21 /* TransactionCell.m in Sources */,
 				40FEEF4E1D1A9500003D2FD4 /* KDCalendarView.m in Sources */,
+				409CB8A41D20DBF6001D9A53 /* Wallet.m in Sources */,
 				408CD6141D1A711D0059EC21 /* AddTransactionViewController.m in Sources */,
 				40FEEF511D1A9500003D2FD4 /* KDMonthCollectionViewFlowLayout.m in Sources */,
+				409CB8A31D20DBF6001D9A53 /* Transaction+CoreDataProperties.m in Sources */,
 				408CD6021D1A2D480059EC21 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -881,6 +921,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		409CB8951D20DBF6001D9A53 /* MoneyManager.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				409CB8961D20DBF6001D9A53 /* MoneyManager.xcdatamodel */,
+			);
+			currentVersion = 409CB8961D20DBF6001D9A53 /* MoneyManager.xcdatamodel */;
+			name = MoneyManager.xcdatamodeld;
+			path = Classes/Modal/MoneyManager.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 408CD5B11D1A1B490059EC21 /* Project object */;
 }

@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Wallet.h"
+#import "Transaction.h"
+#import "Category.h"
+#import "AppDelegate.h"
 
 @interface AddWalletViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *txtWalletName;
 @property (weak, nonatomic) IBOutlet UITextField *txtCurrency;
 @property (weak, nonatomic) IBOutlet UITextField *txtCash;
+
+- (void)didAddWalletWithBlock:(void (^)())completion;
 
 @end

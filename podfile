@@ -6,7 +6,9 @@ target 'MoneyManager' do
   # use_frameworks!
 
   # Pods for MoneyManager
-
+  pod "MagicalRecord"
+  pod 'ActionSheetPicker-3.0', '~> 2.1.0'
+  
   target 'MoneyManagerTests' do
     inherit! :search_paths
     # Pods for testing

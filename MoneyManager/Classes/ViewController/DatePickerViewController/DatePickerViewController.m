@@ -43,6 +43,7 @@
                         [self.calendarView addSubview:self.calendar];
                     }
                     completion:nil];
+    [self.calendar setDateSelected:[NSDate date] animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
