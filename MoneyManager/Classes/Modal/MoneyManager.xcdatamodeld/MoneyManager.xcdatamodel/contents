@@ -18,7 +18,7 @@
         <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sumToTotal" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <relationship name="transactions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="wallet" inverseEntity="Transaction" syncable="YES"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Transaction" inverseName="wallet" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <elements>
         <element name="Category" positionX="-36" positionY="18" width="128" height="90"/>

@@ -18,6 +18,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtCurrency;
 @property (weak, nonatomic) IBOutlet UITextField *txtCash;
 
-- (void)didAddWalletWithBlock:(void (^)())completion;
+- (void)didAddWalletWithBlock:(void (^)(Wallet *wallet))completion;
 
 @end

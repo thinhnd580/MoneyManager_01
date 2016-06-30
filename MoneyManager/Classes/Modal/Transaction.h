@@ -2,7 +2,7 @@
 //  Transaction.h
 //  MoneyManager
 //
-//  Created by Thinh on 6/24/16.
+//  Created by Thinh on 6/30/16.
 //  Copyright © 2016 Thinh. All rights reserved.
 //
 
