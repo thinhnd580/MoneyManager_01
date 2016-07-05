@@ -2,7 +2,7 @@
 //  Wallet+CoreDataProperties.m
 //  MoneyManager
 //
-//  Created by Thinh on 6/24/16.
+//  Created by Thinh on 6/30/16.
 //  Copyright © 2016 Thinh. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,9 +13,9 @@
 
 @implementation Wallet (CoreDataProperties)
 
-@dynamic name;
-@dynamic currency;
 @dynamic cash;
+@dynamic currency;
+@dynamic name;
 @dynamic sumToTotal;
 @dynamic transactions;
 

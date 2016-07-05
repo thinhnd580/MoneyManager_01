@@ -13,12 +13,13 @@
 #import "Category.h"
 #import "ActionSheetPicker.h"
 
-@interface AddTransactionViewController () <UITextFieldDelegate>
+@interface AddTransactionViewController () <UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
-@property (strong,nonatomic) UITapGestureRecognizer *tapRecognizer;
-@property (strong,nonatomic) Wallet *walletSelected;
-@property (strong,nonatomic) NSDate *dateSelected;
-@property (copy,nonatomic) void(^callBackBlock)();
+@property (strong, nonatomic) UITapGestureRecognizer *tapRecognizer;
+@property (strong, nonatomic) Wallet *walletSelected;
+@property (strong, nonatomic) NSDate *dateSelected;
+@property (assign, nonatomic) double costValue;
+@property (copy, nonatomic) void(^callBackBlock)();
 
 @end
 
@@ -35,6 +36,8 @@
     //Set textfield delegate to self
     self.txtCost.delegate = self;
     self.txtCategory.delegate = self;
+    self.costValue = 0.0;
+    [self.txtCost addTarget:self action:@selector(textfieldCostDidChangeText) forControlEvents:UIControlEventEditingChanged];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,11 +87,14 @@
         [formatter setDateFormat:@"dd/MM/yyyy"];
         tran.date = [formatter stringFromDate:self.dateSelected];
         //Cash
-        NSNumberFormatter *cash = [[NSNumberFormatter alloc] init];
-        cash.numberStyle = NSNumberFormatterDecimalStyle;
-        tran.cost = [cash numberFromString:self.txtCost.text];
+        tran.cost = [NSNumber numberWithDouble:self.costValue];
         //Note
         tran.note = self.txtNote.text;
+        //Image if picked
+        if (self.imgAdded.image != nil) {
+            NSData *imageData = UIImagePNGRepresentation(self.imgAdded.image);
+            tran.picture = imageData;
+        }
         //Save and Dismiss viewcontroller
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError * _Nullable error) {
             if (!contextDidSave) {
@@ -121,8 +127,33 @@
                                        }
                                      cancelBlock:^(ActionSheetStringPicker *picker) {
                                          NSLog(@"Block Picker Canceled");
-                                     }
-                                          origin:sender];
+                                     } origin:sender];
+}
+
+- (IBAction)btnPictureClick:(id)sender {
+    //PhotoLibrary
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+- (IBAction)btnCameraClick:(id)sender {
+    //Camera
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+#pragma mark - ImagePickerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    //Set image to view
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.imgAdded.image = chosenImage;
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
 #pragma mark - Text Input handler
@@ -135,6 +166,11 @@
     if (textField == self.txtCost) {
         if (textField.text.length >= 15 && range.length == 0) {
             return NO; // return NO to not change text
+        } else if ([textField.text containsString:@"."] && [string isEqualToString:@"."]) {
+            return NO;
+        } else if ([textField.text length] == 0 && [string isEqualToString:@"."]) {
+            //if textfield isn't have anything and string is "." , cancel
+            return NO;
         }
     }
     if (textField == self.txtNote) {
@@ -143,6 +179,25 @@
         }
     }
     return YES;
+}
+
+- (void)textfieldCostDidChangeText {
+    if ([self.txtCost.text length] > 0) {
+        if( ![@"." hasSuffix:[self.txtCost.text substringFromIndex:([self.txtCost.text length] - 1)]]) {
+            NSString *currentCost = [[self.txtCost.text componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@","]] componentsJoinedByString:@""];
+            self.costValue = [currentCost doubleValue];
+            //Create NSNumber with currency format
+            NSNumberFormatter *currencyFormatter = [[NSNumberFormatter alloc] init];
+            [currencyFormatter setMaximumFractionDigits:2];
+            [currencyFormatter setMinimumFractionDigits:0];
+            [currencyFormatter setAlwaysShowsDecimalSeparator:NO];
+            [currencyFormatter setNumberStyle:NSNumberFormatterCurrencyAccountingStyle];
+            NSNumber *someAmount = [NSNumber numberWithDouble:self.costValue];
+            //set textfield to currency style
+            NSString *string = [currencyFormatter stringFromNumber:someAmount];
+            self.txtCost.text = string;
+        }
+    }
 }
 
 - (void)dismissKeyboard {

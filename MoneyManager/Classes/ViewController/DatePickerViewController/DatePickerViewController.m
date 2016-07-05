@@ -34,16 +34,17 @@
     [super viewDidAppear:animated];
     // Add calendar after view didappear to get correct frame
     self.calendar = [[KDCalendarView alloc] initWithFrame:self.calendarView.bounds];
-    self.calendar.delegate = self;
     self.calendar.dataSource = self;
+    self.calendar.delegate = self;
     [self.view layoutIfNeeded];
     [UIView transitionWithView:self.calendarView duration:0.5
                        options:UIViewAnimationOptionTransitionCurlUp //change to whatever animation you like
                     animations:^ {
                         [self.calendarView addSubview:self.calendar];
                     }
-                    completion:nil];
-    [self.calendar setDateSelected:[NSDate date] animated:YES];
+                    completion:^(BOOL finished) {
+                        [self.calendar setDateSelected:[NSDate date] animated:NO];
+                    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,7 +68,9 @@
 }
 
 - (NSDate*)startDate {
-    return [NSDate date];
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"dd/MM/yy"];
+    return [format dateFromString:@"1/1/2016"];
 }
 
 - (IBAction)btnChoose:(id)sender {

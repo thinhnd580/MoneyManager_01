@@ -147,7 +147,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgy-yi-sjW">
                                                         <rect key="frame" x="10" y="0.0" width="32" height="52"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cash Sumary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3y-Fr-K8B">
@@ -159,7 +159,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day in week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAn-LL-lmT">
                                                         <rect key="frame" x="45" y="8" width="81" height="18"/>
                                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -344,7 +344,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzE-VK-eSJ">
                                                 <rect key="frame" x="51" y="19" width="257" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDw-1S-X6g">
@@ -445,7 +445,7 @@
                                 <rect key="frame" x="10" y="66" width="394" height="616"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXW-R5-1gX" userLabel="contentView">
-                                        <rect key="frame" x="0.0" y="-30" width="394" height="401"/>
+                                        <rect key="frame" x="0.0" y="-30" width="394" height="695"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iz2-f9-yVa">
                                                 <rect key="frame" x="92" y="128" width="282" height="2"/>
@@ -476,7 +476,7 @@
                                                 <rect key="frame" x="124" y="94" width="250" height="24"/>
                                                 <color key="textColor" red="0.057294889129999999" green="0.8350560897" blue="0.050325691460000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Chọn nhóm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OsA-oU-7U8">
                                                 <rect key="frame" x="92" y="38" width="282" height="28"/>
@@ -546,8 +546,8 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3w-Qt-Dxf">
-                                                <rect key="frame" x="218" y="232" width="38" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3w-Qt-Dxf">
+                                                <rect key="frame" x="218" y="232" width="52" height="30"/>
                                                 <state key="normal" title="Chọn ví"/>
                                                 <connections>
                                                     <action selector="btnWalletClick:" destination="4Cw-s3-MYz" eventType="touchUpInside" id="MGj-57-pps"/>
@@ -556,15 +556,21 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uE-yD-aqw">
                                                 <rect key="frame" x="103" y="315" width="49" height="30"/>
                                                 <state key="normal" title="Picture"/>
+                                                <connections>
+                                                    <action selector="btnPictureClick:" destination="4Cw-s3-MYz" eventType="touchUpInside" id="4Ze-qf-UOm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMa-ox-Dae">
                                                 <rect key="frame" x="272" y="315" width="54" height="30"/>
                                                 <state key="normal" title="Camera"/>
+                                                <connections>
+                                                    <action selector="btnCameraClick:" destination="4Cw-s3-MYz" eventType="touchUpInside" id="k3f-uQ-wYT"/>
+                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9hx-lc-FaX">
-                                                <rect key="frame" x="20" y="353" width="354" height="40"/>
+                                                <rect key="frame" x="30" y="353" width="334" height="334"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="7Gt-tq-69a"/>
+                                                    <constraint firstAttribute="height" secondItem="9hx-lc-FaX" secondAttribute="width" id="VIv-mz-i44"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOu-Lk-bkd">
@@ -593,7 +599,7 @@
                                             <constraint firstItem="ifS-aV-Nts" firstAttribute="leading" secondItem="EXW-R5-1gX" secondAttribute="leading" constant="20" id="FFi-Be-WcE"/>
                                             <constraint firstItem="OsA-oU-7U8" firstAttribute="centerY" secondItem="soi-sO-61i" secondAttribute="centerY" id="FSr-6p-aTg"/>
                                             <constraint firstItem="soi-sO-61i" firstAttribute="leading" secondItem="EXW-R5-1gX" secondAttribute="leading" constant="40" id="GUf-Z5-5iB"/>
-                                            <constraint firstAttribute="trailing" secondItem="9hx-lc-FaX" secondAttribute="trailing" constant="20" id="Ix8-im-61g"/>
+                                            <constraint firstAttribute="trailing" secondItem="9hx-lc-FaX" secondAttribute="trailing" constant="30" id="Ix8-im-61g"/>
                                             <constraint firstItem="DJa-5h-dLI" firstAttribute="top" secondItem="sJ2-JU-aPC" secondAttribute="bottom" id="JtJ-2Y-6Kg"/>
                                             <constraint firstAttribute="trailing" secondItem="r5a-bD-AbN" secondAttribute="trailing" constant="20" id="NMn-M5-fjR"/>
                                             <constraint firstItem="c9p-mS-QQ1" firstAttribute="leading" secondItem="iz2-f9-yVa" secondAttribute="leading" id="OQX-FU-PeX"/>
@@ -612,7 +618,7 @@
                                             <constraint firstItem="Z2e-dw-NzB" firstAttribute="leading" secondItem="sJ2-JU-aPC" secondAttribute="trailing" constant="40" id="gDm-gB-emj"/>
                                             <constraint firstItem="e0B-HR-oaO" firstAttribute="height" secondItem="c9p-mS-QQ1" secondAttribute="height" id="hid-wN-tnz"/>
                                             <constraint firstItem="sMa-ox-Dae" firstAttribute="top" secondItem="8uE-yD-aqw" secondAttribute="top" id="k5O-ut-Vww"/>
-                                            <constraint firstItem="9hx-lc-FaX" firstAttribute="leading" secondItem="EXW-R5-1gX" secondAttribute="leading" constant="20" id="l5f-If-w5z"/>
+                                            <constraint firstItem="9hx-lc-FaX" firstAttribute="leading" secondItem="EXW-R5-1gX" secondAttribute="leading" constant="30" id="l5f-If-w5z"/>
                                             <constraint firstAttribute="trailing" secondItem="sMa-ox-Dae" secondAttribute="trailing" constant="68" id="lCa-Q5-QPc"/>
                                             <constraint firstAttribute="bottom" secondItem="9hx-lc-FaX" secondAttribute="bottom" constant="8" id="nCL-oJ-ZbG"/>
                                             <constraint firstAttribute="trailing" secondItem="OsA-oU-7U8" secondAttribute="trailing" constant="20" id="na2-9c-Gzj"/>
@@ -764,7 +770,7 @@
                                         <rect key="frame" x="104" y="139" width="231" height="34"/>
                                         <color key="textColor" red="0.057294889129999999" green="0.8350560897" blue="0.050325691460000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z75-LF-VKW">
                                         <rect key="frame" x="104" y="112" width="231" height="2"/>

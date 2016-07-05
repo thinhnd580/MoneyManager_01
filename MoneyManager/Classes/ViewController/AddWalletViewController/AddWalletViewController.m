@@ -11,7 +11,8 @@
 @interface AddWalletViewController () <UITextFieldDelegate>
 
 @property (strong,nonatomic) UITapGestureRecognizer *tapRecognizer;
-@property (copy,nonatomic) void(^callBackBlock)();
+@property (assign, nonatomic) double cashValue;
+@property (copy,nonatomic) void(^callBackBlock)(Wallet *wallet);
 
 @end
 
@@ -24,7 +25,9 @@
     //Add tap recognizer to dismiss keyboard when touch outside textfield
     self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:self.tapRecognizer];
+    self.cashValue = 0.0;
     self.txtCash.delegate = self;
+    [self.txtCash addTarget:self action:@selector(textfieldCashDidChangeText) forControlEvents:UIControlEventEditingChanged];
     self.txtCurrency.delegate = self;
     self.txtWalletName.delegate = self;
 }
@@ -35,7 +38,7 @@
 }
 
 #pragma mark - assign block
-- (void)didAddWalletWithBlock:(void (^)())completion {
+- (void)didAddWalletWithBlock:(void (^)(Wallet *wallet))completion {
     self.callBackBlock = completion;
 }
 
@@ -61,9 +64,34 @@
     if (textField == self.txtCash) {
         if (textField.text.length >= 13 && range.length == 0) {
             return NO; // return NO to not change text
+        } else if ([textField.text containsString:@"."] && [string isEqualToString:@"."]) {
+            //if textfield already has "." , cancel.
+            return NO;
+        } else if ([textField.text length] == 0 && [string isEqualToString:@"."]) {
+            //if textfield isn't have anything and string is "." , cancel
+            return NO;
         }
     }
     return YES;
+}
+
+- (void)textfieldCashDidChangeText {
+    if ([self.txtCash.text length] > 0) {
+        if( ![@"." hasSuffix:[self.txtCash.text substringFromIndex:([self.txtCash.text length] - 1)]]) {
+            NSString *currentCost = [[self.txtCash.text componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@","]] componentsJoinedByString:@""];
+            self.cashValue = [currentCost doubleValue];
+            //Create NSNumber with currency format
+            NSNumberFormatter *currencyFormatter = [[NSNumberFormatter alloc] init];
+            [currencyFormatter setMaximumFractionDigits:2];
+            [currencyFormatter setMinimumFractionDigits:0];
+            [currencyFormatter setAlwaysShowsDecimalSeparator:NO];
+            [currencyFormatter setNumberStyle:NSNumberFormatterCurrencyAccountingStyle];
+            NSNumber *someAmount = [NSNumber numberWithDouble:self.cashValue];
+            //set textfield to currency style
+            NSString *string = [currencyFormatter stringFromNumber:someAmount];
+            self.txtCash.text = string;
+        }
+    }
 }
 
 #pragma mark - Button handler
@@ -79,14 +107,14 @@
         // Wallet cash
         NSNumberFormatter *cash = [[NSNumberFormatter alloc] init];
         cash.numberStyle = NSNumberFormatterDecimalStyle;
-        wallet.cash = [cash numberFromString:self.txtCash.text];
+        wallet.cash = [NSNumber numberWithDouble:self.cashValue];
         //TODO : Add block to call back update
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError * _Nullable error) {
             if (!contextDidSave) {
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Opps" message:@"Some thing went wrong, try again later" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                 [alert show];
             } else {
-                self.callBackBlock();
+                self.callBackBlock(wallet);
                 [self dismissViewControllerAnimated:true completion:nil];
             }
         }];
