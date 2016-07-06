@@ -85,7 +85,7 @@
             [currencyFormatter setMaximumFractionDigits:2];
             [currencyFormatter setMinimumFractionDigits:0];
             [currencyFormatter setAlwaysShowsDecimalSeparator:NO];
-            [currencyFormatter setNumberStyle:NSNumberFormatterCurrencyAccountingStyle];
+            [currencyFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
             NSNumber *someAmount = [NSNumber numberWithDouble:self.cashValue];
             //set textfield to currency style
             NSString *string = [currencyFormatter stringFromNumber:someAmount];
@@ -96,7 +96,12 @@
 
 #pragma mark - Button handler
 - (IBAction)btnCancelClick:(id)sender {
-    [self dismissViewControllerAnimated:true completion:nil];
+    if ([((AppDelegate*)[[UIApplication sharedApplication] delegate]) checkFirstTimeRunning]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please Add New Wallet" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    } else {
+        [self dismissViewControllerAnimated:true completion:nil];
+    }
 }
 
 - (IBAction)btnDoneClick:(id)sender {

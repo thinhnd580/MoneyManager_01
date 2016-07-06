@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Wallet.h"
 
 @interface AppDelegate ()
 
@@ -49,6 +50,10 @@
         [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"FIRSTTIMERUNNING"];
         return YES;
     } else {
+        NSArray *wallet = [Wallet MR_findAll];
+        if ([wallet count] == 0) {
+            return YES;
+        }
         return NO;
     }
 }
