@@ -13,6 +13,11 @@
 #import "AddTransactionViewController.h"
 #import "AppDelegate.h"
 
+typedef NS_ENUM(NSUInteger, TransactionMode) {
+    TransactionModeNormal = 0,
+    TransactionModeEdit = 1
+};
+
 @interface HomeViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,UIPopoverPresentationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contrainTableViewHeight;

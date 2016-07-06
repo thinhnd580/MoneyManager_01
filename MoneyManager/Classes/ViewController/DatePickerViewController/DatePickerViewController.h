@@ -11,6 +11,7 @@
 
 @interface DatePickerViewController : UIViewController
 
+@property (strong, nonatomic) NSDate *dateWillDisplay;
 - (void)didSelectDateWithBlock:(void (^)(NSDate* date))completion;
 
 @end

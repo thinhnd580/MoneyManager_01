@@ -8,9 +8,6 @@
 
 #import "AddTransactionViewController.h"
 #import "DatePickerViewController.h"
-#import "Wallet.h"
-#import "Transaction.h"
-#import "Category.h"
 #import "ActionSheetPicker.h"
 
 @interface AddTransactionViewController () <UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
@@ -20,6 +17,7 @@
 @property (strong, nonatomic) NSDate *dateSelected;
 @property (assign, nonatomic) double costValue;
 @property (copy, nonatomic) void(^callBackBlock)();
+@property (strong, nonatomic) NSNumberFormatter *currencyFormatter;
 
 @end
 
@@ -32,12 +30,34 @@
     //Add tap recognizer to dismiss keyboard when touch outside textfield
     self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:self.tapRecognizer];
-    [self updateDate:[NSDate date]];
     //Set textfield delegate to self
     self.txtCost.delegate = self;
     self.txtCategory.delegate = self;
-    self.costValue = 0.0;
     [self.txtCost addTarget:self action:@selector(textfieldCostDidChangeText) forControlEvents:UIControlEventEditingChanged];
+    //Create NSNumberFormater
+    self.currencyFormatter = [[NSNumberFormatter alloc] init];
+    [self.currencyFormatter setMaximumFractionDigits:2];
+    [self.currencyFormatter setMinimumFractionDigits:0];
+    [self.currencyFormatter setAlwaysShowsDecimalSeparator:NO];
+    [self.currencyFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    //Update label
+    if (TransactionModeEdit == self.transactionMode) {
+        //If Current mode is Edit mode
+        self.txtCategory.text = self.transaction.category.name;
+        self.txtNote.text = self.transaction.note;
+        self.txtCost.text = [self.currencyFormatter stringFromNumber:self.transaction.cost];
+        self.costValue = [self.transaction.cost doubleValue];
+        NSDateFormatter *format = [[NSDateFormatter alloc] init];
+        [format setDateFormat:@"dd/MM/yy"];
+        [self updateDate:[format dateFromString:self.transaction.date]];
+        self.walletSelected = self.transaction.wallet;
+        [self.btnWallet setTitle:self.transaction.wallet.name forState:UIControlStateNormal];
+        //Image
+        self.imgAdded.image = [UIImage imageWithData:self.transaction.picture];
+    } else {
+        [self updateDate:[NSDate date]];
+        self.costValue = 0.0;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,6 +79,66 @@
     self.lbMonthYear.text = [NSString stringWithFormat:@"Tháng %@",[formatter stringFromDate:date]];
 }
 
+#pragma mark - Transaction to coredate
+- (Transaction*)createNewTransactionWithCategory:(NSString*)categoryStr wallet:(Wallet*)wallet date:(NSDate*)date cost:(double)cost note:(NSString*)note image:(UIImage*)img {
+    /*  Category   */
+    Category *category = [Category MR_findFirstByAttribute:@"name" withValue:categoryStr];
+    // If category not found, create new one
+    if (category == nil) {
+        category = [Category MR_createEntity];
+        category.name = categoryStr;
+        category.type = [NSNumber numberWithInt:1];
+    }
+    Transaction *tran = [Transaction MR_createEntity];
+    tran.category = category;
+    tran.wallet = wallet;
+    //Date
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy"];
+    tran.date = [formatter stringFromDate:date];
+    //Cash
+    tran.cost = [NSNumber numberWithDouble:cost];
+    //Note
+    tran.note = note;
+    //Image if picked
+    if (img != nil) {
+        NSData *imageData = UIImagePNGRepresentation(img);
+        tran.picture = imageData;
+    }
+    return tran;
+}
+
+- (void)updateTransaction{
+    //Detect change to better performance
+    if (![self.transaction.category.name isEqualToString:self.txtCategory.text]) {
+        Category *category = [Category MR_findFirstByAttribute:@"name" withValue:self.txtCategory.text];
+        // If category not found, create new one
+        if (category == nil) {
+            category = [Category MR_createEntity];
+            category.name = self.txtCategory.text;
+            category.type = [NSNumber numberWithInt:1];
+        }
+        self.transaction.category = category;
+    }
+    if ([self.transaction.cost doubleValue] != self.costValue) {
+        self.transaction.cost = [NSNumber numberWithDouble:self.costValue];
+    }
+    if (![self.transaction.note isEqualToString:self.txtNote.text]) {
+        self.transaction.note = self.txtNote.text;
+    }
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy"];
+    if (![self.transaction.date isEqualToString:[formatter stringFromDate:self.dateSelected]]) {
+        self.transaction.date = [formatter stringFromDate:self.dateSelected];
+    }
+    if (![self.transaction.wallet.name isEqualToString:[self.btnWallet titleForState:UIControlStateNormal]]) {
+        self.transaction.wallet = self.walletSelected;
+    }
+    if (![self.transaction.picture isEqualToData:UIImagePNGRepresentation(self.imgAdded.image)]) {
+        self.transaction.picture = UIImagePNGRepresentation(self.imgAdded.image);
+    }
+}
+
 #pragma mark - Call back assign
 - (void)didAddTransactionWithBlock:(void (^)())completion {
     self.callBackBlock = completion;
@@ -71,31 +151,13 @@
 
 - (IBAction)btnDoneClick:(id)sender {
     if ([self checkInput]) {
-        Category *category = [Category MR_findFirstByAttribute:@"name" withValue:self.txtCategory.text];
-        // If category not found, create new one
-        if (category == nil) {
-            category = [Category MR_createEntity];
-            category.name = self.txtCategory.text;
-            category.type = [NSNumber numberWithInt:1];
+        if (self.transactionMode == TransactionModeEdit) {
+            [self updateTransaction];
+        } else {
+            //Create new Transaction
+            [self createNewTransactionWithCategory:self.txtCategory.text wallet:self.walletSelected date:self.dateSelected cost:self.costValue note:self.txtNote.text image:self.imgAdded.image];
         }
-        //Create New Transaction
-        Transaction *tran = [Transaction MR_createEntity];
-        tran.category = category;
-        tran.wallet = self.walletSelected;
-        //Date
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat:@"dd/MM/yyyy"];
-        tran.date = [formatter stringFromDate:self.dateSelected];
-        //Cash
-        tran.cost = [NSNumber numberWithDouble:self.costValue];
-        //Note
-        tran.note = self.txtNote.text;
-        //Image if picked
-        if (self.imgAdded.image != nil) {
-            NSData *imageData = UIImagePNGRepresentation(self.imgAdded.image);
-            tran.picture = imageData;
-        }
-        //Save and Dismiss viewcontroller
+         //Save and Dismiss viewcontroller
         [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError * _Nullable error) {
             if (!contextDidSave) {
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Opps" message:@"Some thing went wrong, try again later" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -159,12 +221,12 @@
 #pragma mark - Text Input handler
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     if (textField == self.txtCategory) {
-        if (textField.text.length >= 15 && range.length == 0) {
+        if (textField.text.length >= 10 && range.length == 0) {
             return NO; // return NO to not change text
         }
     }
     if (textField == self.txtCost) {
-        if (textField.text.length >= 15 && range.length == 0) {
+        if (textField.text.length >= 10 && range.length == 0) {
             return NO; // return NO to not change text
         } else if ([textField.text containsString:@"."] && [string isEqualToString:@"."]) {
             return NO;
@@ -186,15 +248,9 @@
         if( ![@"." hasSuffix:[self.txtCost.text substringFromIndex:([self.txtCost.text length] - 1)]]) {
             NSString *currentCost = [[self.txtCost.text componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@","]] componentsJoinedByString:@""];
             self.costValue = [currentCost doubleValue];
-            //Create NSNumber with currency format
-            NSNumberFormatter *currencyFormatter = [[NSNumberFormatter alloc] init];
-            [currencyFormatter setMaximumFractionDigits:2];
-            [currencyFormatter setMinimumFractionDigits:0];
-            [currencyFormatter setAlwaysShowsDecimalSeparator:NO];
-            [currencyFormatter setNumberStyle:NSNumberFormatterCurrencyAccountingStyle];
             NSNumber *someAmount = [NSNumber numberWithDouble:self.costValue];
             //set textfield to currency style
-            NSString *string = [currencyFormatter stringFromNumber:someAmount];
+            NSString *string = [self.currencyFormatter stringFromNumber:someAmount];
             self.txtCost.text = string;
         }
     }
@@ -232,6 +288,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     DatePickerViewController *dateVC = (DatePickerViewController*)[segue destinationViewController];
     //Update date when user done select date
+    dateVC.dateWillDisplay = self.dateSelected;
     [dateVC didSelectDateWithBlock:^(NSDate *date) {
         NSLog(@"Date picked");
         // Set title for button date picker

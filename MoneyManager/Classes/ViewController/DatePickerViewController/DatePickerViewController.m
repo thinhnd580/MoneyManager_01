@@ -43,7 +43,11 @@
                         [self.calendarView addSubview:self.calendar];
                     }
                     completion:^(BOOL finished) {
-                        [self.calendar setDateSelected:[NSDate date] animated:NO];
+                        if (self.dateWillDisplay != nil) {
+                            [self.calendar setDateSelected:self.dateWillDisplay animated:NO];
+                        } else {
+                            [self.calendar setDateSelected:[NSDate date] animated:NO];
+                        }
                     }];
 }
 
