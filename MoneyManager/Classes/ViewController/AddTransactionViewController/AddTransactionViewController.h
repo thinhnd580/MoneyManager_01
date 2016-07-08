@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "HomeViewController.h"
+#import "Wallet.h"
+#import "Transaction.h"
+#import "Category.h"
 
 @interface AddTransactionViewController : UIViewController
 
@@ -21,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnPicture;
 @property (weak, nonatomic) IBOutlet UIButton *btnCamera;
 @property (weak, nonatomic) IBOutlet UIImageView *imgAdded;
+@property (assign, nonatomic) NSUInteger transactionMode;
+@property (strong, nonatomic) Transaction *transaction;
 
 - (void)didAddTransactionWithBlock:(void (^)())completion;
 

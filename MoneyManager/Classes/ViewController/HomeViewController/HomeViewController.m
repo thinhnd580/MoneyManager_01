@@ -51,7 +51,7 @@
     [self.currencyFormatter setMaximumFractionDigits:2];
     [self.currencyFormatter setMinimumFractionDigits:0];
     [self.currencyFormatter setAlwaysShowsDecimalSeparator:NO];
-    [self.currencyFormatter setNumberStyle:NSNumberFormatterCurrencyAccountingStyle];
+    [self.currencyFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
     //Init value
     self.dateSelected = [NSDate date];
     self.inComeValue = 0.0;
@@ -66,7 +66,7 @@
         if (walletSelectedString == nil) {
             self.walletSelected = [Wallet MR_findFirst];
             // Wallet can't be nil so don't nessesary to check it
-            [[NSUserDefaults standardUserDefaults] setObject:self.walletSelected forKey:@"WALLET"];
+            [[NSUserDefaults standardUserDefaults] setObject:self.walletSelected.name forKey:@"WALLET"];
         } else {
             self.walletSelected = [Wallet MR_findFirstByAttribute:@"name" withValue:walletSelectedString];
             [self.walletBtn setTitle:[NSString stringWithFormat:@"Wallet: %@", walletSelectedString] forState:UIControlStateNormal];
@@ -172,6 +172,8 @@
 
 #pragma mark - TableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Transaction *tran = (Transaction*)[self.arrTransactions objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"EditTransaction" sender:tran];
 }
 
 #pragma mark - Button Hanlder
@@ -211,6 +213,7 @@
     //Call Back block when picked date
     if ([@"ShowDatePicker" isEqualToString:segue.identifier]) {
         DatePickerViewController *dateVC = (DatePickerViewController*)[segue destinationViewController];
+        dateVC.dateWillDisplay = self.dateSelected;
         [dateVC didSelectDateWithBlock:^(NSDate *date) {
             NSLog(@"Date picked");
             self.dateSelected = date;
@@ -233,6 +236,16 @@
         AddTransactionViewController *tranVC = [segue destinationViewController];
         [tranVC didAddTransactionWithBlock:^() {
             NSLog(@"Transaction Added");
+            [self loadDataForDate:self.dateSelected];
+            [self loadOverviewInfoForWallet:self.walletSelected];
+        }];
+    }
+    if ([@"EditTransaction" isEqualToString:segue.identifier]) {
+        AddTransactionViewController *tranVC = [segue destinationViewController];
+        tranVC.transactionMode = TransactionModeEdit;
+        tranVC.transaction = sender;
+        [tranVC didAddTransactionWithBlock:^{
+            NSLog(@"Transaction Edited");
             [self loadDataForDate:self.dateSelected];
             [self loadOverviewInfoForWallet:self.walletSelected];
         }];
