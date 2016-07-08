@@ -171,6 +171,7 @@
 }
 
 - (IBAction)btnWalletClick:(id)sender {
+    //Dismiss keyboard
     [self dismissKeyboard];
     NSArray *wallets = [Wallet MR_findAll];
     // Get all Wallet name
